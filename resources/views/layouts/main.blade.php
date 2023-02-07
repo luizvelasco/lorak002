@@ -25,35 +25,28 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="collapse navbar-collapse" id="navbar">
                     <a href="/" class="navbar-brand">
-                        <img src="/img/logo.webp" alt="Movimentos do Crossfit">
+                        <img src="/images/logo.webp" alt="Lorak 002"> Lorak 002
                     </a>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Movimentos</a>
-                        </li>
-                        @auth
-                        <li class="nav-item">
-                            <a href="/moviments/create" class="nav-link">Cadastrar Movimento</a>
+                            <a href="/blog" class="nav-link">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/dashboard" class="nav-link">Dashboard</a>
+                            <a href="/photos" class="nav-link">Fotos</a>
                         </li>
                         <li class="nav-item">
-                           <form action="/logout" method="POST">
-                                @csrf
-                                <a href="/logout" 
-                                    class="nav-link"
-                                    onclick="event.preventDefault();
-                                    this.closest('form').submit();">Sair</a>
-                            </form>
+                            <a href="/movements" class="nav-link">Movimentos do Crossfit</a>
                         </li>
-                        @endauth
-                        @guest
                         <li class="nav-item">
-                            <a href="/login" class="nav-link">Entrar</a>
+                            <a href="/plans" class="nav-link">Planos</a>
                         </li>
-   
-                        @endguest
+                        <li class="nav-item">
+                            <a href="/schedules" class="nav-link">Horarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact" class="nav-link">Contato</a>
+                        </li>
+                        
                     </ul>
                 </div>
             </nav>
@@ -61,15 +54,12 @@
         <main>
             <div class="container-fluid">
                 <div class="row">
-                    @if (session('msg'))
-                        <p class="msg">{{ session ('msg')}}</p>
-                    @endif
                     @yield('content')
                 </div>
             </div>
         </main>
     <footer>
-        <p>Movimentos do Crossfit &copy; 2022</p>
+        <p>Lorak002 &copy; 2023</p>
     </footer>
     
     {{-- ION icons --}}
